@@ -4,21 +4,36 @@
 
 ### Platform Fees
 - Viator: 30%
-- Airbnb: 25%
+- Airbnb: 20% (not 25% - confirmed from data)
 - GetYourGuide: 25%
-- Bokun (Direct): 3%
+- Bokun (Direct): 0% (no platform fee)
+
+### Data Sources
+- Viator: Excel file with bookings → "Supplier NET price" is what we get paid
+- Airbnb: CSV export → "Gross earnings" + "Service fee" = gross
+- GetYourGuide: CSV export → "Retail Price" - "Commission Amount" = net
+- Bokun: CSV export → "Supplier NET price" is what we get paid (no fee)
+
+### IMPORTANT: Viator Nuance
+- Viator Excel shows FULL gross (what guest paid)
+- Viator CSV payout shows NET after their 30% cut
+- The CSV "TOTAL PAYMENT" is the actual cash deposited
+- Don't reverse-calculate gross from net - use the actual gross from Excel
 
 ### Math Calculations
-- Viator only shows net → calculate gross by reversing the 30%
 - We pay bar based on **net** (not gross)
-- Gross is just for our internal tracking
+- Gross is for internal tracking only
+- Viator: Use the CSV "TOTAL PAYMENT" as net ($2,659.30)
+- Viator gross from Excel: $3,799.00 (but we only got $2,659.30 net)
 
 ### Required Data Per Booking
-- Booking date
-- Activity date
+- Booking date (Sale date for Viator)
+- Activity/Arrival date
+- Guest count
+- Guest name (if available)
 - Gross rate
+- Platform fee
 - Net rate
-- Number of guests
 
 ### Commission Calculation
 - 10% of net = bar's commission
@@ -27,14 +42,51 @@
 - Total owed to bar
 
 ### Monthly Process
-1. Get data from: Viator, GetYourGuide, Airbnb, Bokun (direct)
-2. Calculate gross from net where needed
+1. Get raw payout files from 4 platforms
+2. Parse each platform's format:
+   - Viator: Excel with customer names, use CSV for net total
+   - Airbnb: CSV - filter "Experience" rows only (not Payout rows)
+   - GetYourGuide: CSV - filter positive amounts only
+   - Bokun: CSV - filter CONFIRMED/ARRIVED only
 3. Sum all net revenue
 4. Calculate 10% commission
 5. Apply $1,500 minimum if under $15k
 6. Add liquor costs
-7. Create report in Google Sheets
-8. Send to bar owner
+7. Create report in Google Sheets with:
+   - Summary section with totals
+   - Booking details section
+   - Each platform separated with headers
+   - Platform subtotals and grand total
+   - Dollar signs on all money values
+8. Save to Drive: Charleston Commission Reports > [Year] folder
+9. Keep test versions in separate "Testing" folder
+
+### Sheet Layout (Gospel Format - V5)
+- Row 1: Title
+- Row 3-9: Summary table (Platform, Gross, Fee, Net, Bookings, Guests)
+- Row 11: TOTALS
+- Row 13-18: Commission calculation
+- Row 20+: Booking details
+  - Platform header
+  - Column headers: Booking Date, Arrival Date, Guests, Guest Name, Gross Rate, Fee, Net Rate
+  - Individual bookings
+  - Platform TOTAL row
+- Grand TOTAL at very bottom
+
+### Drive Organization
+- Main folder: Charleston Commission Reports
+- Year subfolders: Charleston_Commission_Reports_2023, 2024, 2025, 2026
+- Testing subfolder: Jan Commission Report - Testing (for drafts)
+
+### Key Learnings (Session 2026-02-18)
+1. Always use the CSV payout for Viator net total, not calculated
+2. Each platform has different date formats - normalize to MM/DD/YYYY
+3. Don't assume fee % - verify from actual data (Airbnb is 20%, not 25%)
+4. Keep test versions separate from official reports
+5. Dollar signs important for readability
+6. Separate platforms clearly with headers and subtotals
+7. Guest names not available in GetYourGuide export
+8. Bokun bookings sometimes span Dec-Jan - filter by activity date
 
 ## Locations
 
