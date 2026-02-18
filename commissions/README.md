@@ -1,40 +1,24 @@
-# Commission Reports - Complete Collection
+# Commission Reports - Charleston
 
-## Summary
-- **Sip History email:** Aug 2025 - Dec 2025
-- **Alchemix email:** Nov 2024 - July 2025
+## Drive Structure
+**Main Folder:** https://drive.google.com/drive/folders/1bQB5JCs31IoVAnQmd_cFK4wnUiqkiGcj
 
-## Reports in Drive Folder (Monthly Commission Reports):
-https://drive.google.com/drive/folders/1bQB5JCs31IoVAnQmd_cFK4wnUiqkiGcj
+Subfolders:
+- Charleston 2023: https://drive.google.com/drive/folders/1GxcOLoF8htf1nJ8al2GuFlJi-554EVy-
+- Charleston 2024: https://drive.google.com/drive/folders/1ivxfek6FgjCXdufbVTL2MB1bvzbCeU3s
+- Charleston 2025: https://drive.google.com/drive/folders/1axR6ERRjQNYxJPSXVOdRVK91r44D6x9d
 
-### 2025
-| Month | Source | Status |
-|-------|--------|--------|
-| December | Sip History | ✅ |
-| November | Sip History | ✅ |
-| October | Sip History | ✅ |
-| September | Sip History | ✅ |
-| August | Sip History | ✅ |
-| July | Alchemix | ⚠️ PDF only |
-| June | Alchemix | ✅ |
-| May | Alchemix | ✅ |
-| April | ? | ❌ Missing |
-| March | ? | ❌ Missing |
-| February | ? | ❌ Empty in source |
-| January | Alchemix | ✅ |
+## Context
+- **Faculty Lounge** = old Charleston location (2022-2024) - owner: Nayda (naydamf@gmail.com)
+- **Frontier Lounge** = new Charleston location (Nov 2024-present) - owner: Neil (neilwlykins@gmail.com)
+- Reports sent to nayda@... were for Faculty Lounge (old location)
+- Reports sent to neil@... are for Frontier Lounge (current location)
 
-### 2024
-| Month | Source | Status |
-|-------|--------|--------|
-| December | Alchemix | ✅ (in Jan 2025 spreadsheet) |
-| November | Alchemix | ✅ |
-| October | ? | ❌ Maybe |
+## Missing Reports (need to find locally)
+- 2023: All months (need to search Alchemix email with Nayda)
+- 2024: September, October
+- 2025: February (empty), March, April, July (PDF only, can't download)
 
-## Notes:
-- July 2025 is only a PDF attachment, not a spreadsheet
-- February 2025 appears empty in the source spreadsheet
-- March & April 2025 not found in emails (could be in Drive or local files)
-
-## Google Accounts Configured:
-- **Sip History:** tommy@siphistory.co (client: default)
+## Google Accounts
+- **Sip History:** tommy@siphistory.co
 - **Alchemix:** tommy@alchemix.co (client: alchemix)
