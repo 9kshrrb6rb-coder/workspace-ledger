@@ -1,5 +1,32 @@
 # MEMORY.md - Ledger's Long-Term Memory
 
+## Financial Organization Project
+
+### Current Status (Feb 18, 2026)
+- Local folder structure created for financial files
+- Viator payment file parsed ($604.52 for Jan 2026)
+- Google Drive folders set up (need gog auth to continue)
+- Cron job running every 2 hours to continue work
+
+### Local Financial Files
+**Location:** `workspace-ledger/financial-files/`
+- viator/ - Viator payout files
+- airbnb/ - Airbnb payout files
+- stripe/ - Stripe transaction exports
+- bokun/ - Bokun direct booking exports
+- getyourguide/ - GetYourGuide payout files
+- bank-statements/ - Bank statement PDFs
+- receipts/ - Expense receipts
+- invoices/ - Vendor invoices
+
+### Recent Viator Payout (Feb 6, 2026)
+- **Total:** $604.52
+- **Period:** January 2026 arrivals
+- **Bookings:** 8 reservations
+- **File:** viator_payment.xlsx (now organized)
+
+---
+
 ## Commission Report Process
 
 ### Platform Fees
