@@ -87,3 +87,18 @@
 - **IMPORTANT:** I must maintain gog authentication so I can access Google Sheets
 - If authentication fails, I need to fix it - NOT ask user to do manual work
 - Never ask user to manually add data to spreadsheets - that's my job
+
+### Current Status (Feb 18, 2026)
+- gog has `GOG_KEYRING_PASSWORD=test` working for keyring bypass
+- Token exists for tommy@alchemix.co but only has gmail (no sheets/drive)
+- **NEED TO RE-AUTH** with full permissions
+
+### Auth Command (when user at computer)
+```bash
+export GOG_KEYRING_PASSWORD=test
+gog auth add tommy@alchemix.co --services gmail,drive,sheets
+```
+
+### Long-term Solution
+- Set up service account for agent (no browser needed)
+- Or create dedicated Google Workspace account
